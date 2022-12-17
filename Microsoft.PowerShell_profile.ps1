@@ -18,6 +18,7 @@ Set-Alias vim nvim
 Set-Alias grep findstr
 Set-Alias code code-insiders
 Set-Alias eth get-netadapter
+Set-Alias ll lsd
 
 function which ($arg) {
   Get-Command -Name $arg -ErrorAction SilentlyContinue |
