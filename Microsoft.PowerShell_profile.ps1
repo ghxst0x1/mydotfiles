@@ -18,7 +18,10 @@ Set-Alias vim nvim
 Set-Alias grep findstr
 Set-Alias code code-insiders
 Set-Alias eth get-netadapter
-Set-Alias ll lsd
+
+function ll{
+	lsd -l
+}
 
 function which ($arg) {
   Get-Command -Name $arg -ErrorAction SilentlyContinue |
@@ -41,6 +44,10 @@ function note {
 	echo "date: $(date)" >> $HOME/notes.txt
 	echo "$args" >> $HOME/notes.txt
 	echo "" >> $HOME/notes.txt
+}
+
+function govim {
+	cd $env:LOCALAPPDATA/nvim
 }
 
 function chrome {
