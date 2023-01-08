@@ -1,8 +1,10 @@
 # oh-my-posh init pwsh | Invoke-Expression
 # Import-Module oh-my-posh
 
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/mytheme.omp.json" | Invoke-Expression
-#Invoke-Expression (&starship init powershell)
+#oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/mytheme.omp.json" | Invoke-Expression
+$ENV:STARSHIP_CONFIG = "$HOME\.config\lempa.toml"
+$ENV:STARSHIP_DISTRO = "者 GhxsT "
+Invoke-Expression (&starship init powershell)
 
 Import-Module -Name Terminal-Icons
 
