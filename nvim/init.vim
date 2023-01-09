@@ -2,7 +2,7 @@
 :set mouse=a
 :set smarttab
 
-call plug#begin('C:/User/GhxsT/AppData/Local/nvim/autoload/plugged')
+call plug#begin('C:/Users/GhxsT/AppData/Local/nvim/autoload/plugged')
 
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
