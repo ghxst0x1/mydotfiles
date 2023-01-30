@@ -17,6 +17,7 @@ Import-Module PSFzf
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 
 Set-Alias vim nvim
+Set-Alias vi nvim
 Set-Alias grep findstr
 Set-Alias code code-insiders
 Set-Alias eth get-netadapter
