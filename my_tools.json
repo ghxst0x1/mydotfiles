@@ -1,0 +1,104 @@
+{
+  "github": [
+    {
+      "Name": "hcxdumptool",
+      "Link": "https://github.com/ZerBea/hcxdumptool.git",
+      "Branch": ""
+    },
+    {
+      "Name": "hcxtools",
+      "Link": "https://github.com/ZerBea/hcxtools",
+      "Branch": ""
+    },
+    {
+      "Name": "Photon",
+      "Link": "https://github.com/s0md3v/Photon.git",
+      "Branch": ""
+    },
+    {
+      "Name": "Sherlock",
+      "Link": "https://github.com/sherlock-project/sherlock.git",
+      "Branch": ""
+    },
+    {
+      "Name": "Wifite2",
+      "Link": "https://github.com/kimocoder/wifite2.git",
+      "Branch": ""
+    },
+    {
+      "Name": "AhMyth",
+      "Link": "https://GitHub.com/Morsmalleo/AhMyth",
+      "Branch": ""
+    },
+    {
+      "Name": " ",
+      "Link": "https://github.com/M4sc3r4n0/Evil-Droid.git",
+      "Branch": ""
+    },
+    {
+      "Name": " ",
+      "Link": "https://github.com/evyatarmeged/Raccoon.git",
+      "Branch": ""
+    },
+    {
+      "Name": " ",
+      "Link": "https://github.com/gkbrk/slowloris.git",
+      "Branch": ""
+    },
+    {
+      "Name": " ",
+      "Link": "https://github.com/wifiphisher/wifiphisher",
+      "Branch": ""
+    },
+    {
+      "Name": " ",
+      "Link": "https://github.com/TrevorSatori/Wifi-Sweep",
+      "Branch": ""
+    },
+    {
+      "Name": " ",
+      "Link": "https://github.com/XCHADXFAQ77X/XERXES.git",
+      "Branch": ""
+    },
+    {
+      "Name": " ",
+      "Link": "https://github.com/jbreed/apkinjector.git",
+      "Branch": ""
+    },
+    {
+      "Name": "",
+      "Link": "https://github.com/Tylous/ScareCrow.git",
+      "Branch": ""
+    },
+    {
+      "Name": "",
+      "Link": "https://github.com/htr-tech/zphisher.git",
+      "Branch": ""
+    },
+    {
+      "Name": "",
+      "Link": "https://github.com/jbreed/apkwash.git",
+      "Branch": ""
+    },
+    {
+      "Name": "",
+      "Link": "https://github.com/HavocFramework/Havoc.git",
+      "Branch": ""
+    },
+    {
+      "Name": "",
+      "Link": "https://github.com/ghxst0x1/vulnscan.git",
+      "Branch": ""
+    }
+  ],
+  "external": [
+    "gophish",
+    "ngrok",
+    "shellter",
+    "ZAP",
+    "Nessus",
+    "thorium",
+    "Invoke-Obfuscation",
+    "PEAS"
+  ]
+}
