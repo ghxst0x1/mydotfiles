@@ -64,7 +64,24 @@ $wingetPackages = @(
     "Logitech.GHUB",
     "qBittorrent.qBittorrent",
     "WinSCP.WinSCP",
-    "DuongDieuPhap.ImageGlass")
+    "DuongDieuPhap.ImageGlass",
+    "9P8LTPGCBZXD",
+    "9N5JJZW4QZBR",
+    "voidtools.Everything",
+    "Soulseek.SoulseekQt",
+    "Google.NearbyShare",
+    "DuongDieuPhap.ImageGlass",
+    "Stremio.Stremio",
+    "OBSProject.OBSStudio",
+    "HandBrake.HandBrake",
+    "Avidemux.Avidemux",
+    "VMware.WorkstationPro",
+    "EpicGames.EpicGamesLauncher",
+    "Notepad++.Notepad++")
+# 9N5JJZW4QZBR - XtremeDownloadManager
+# 9P8LTPGCBZXD - Wintoys
+# Optional with no sources
+# NetLimiter, Peace + Equalizer APO,  
 foreach ($package in $wingetPackages){
     Write-Host "Installing $package using Winget..."
     winget install --id $package -e -q
