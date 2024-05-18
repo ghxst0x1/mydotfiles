@@ -1,15 +1,15 @@
-# oh-my-posh init pwsh | Invoke-Expression
+# Initialize oh-my-posh if needed
 # Import-Module oh-my-posh
+# oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/emodipt-extend.omp.json" | Invoke-Expression
 
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/emodipt-extend.omp.json" | Invoke-Expression
+# Starship prompt configuration
 $ENV:STARSHIP_CONFIG = "$HOME\.config\dwm.toml"
-#$ENV:STARSHIP_CONFIG = "$HOME\.config\lempa.toml"
-$ENV:STARSHIP_DISTRO = "者 GhxsT "
-$ENV:BIN = "$SystemDrive\bin"
-#Invoke-Expression (&starship init powershell)
+Invoke-Expression (&starship init powershell)
 
+# Import Terminal-Icons module
 Import-Module -Name Terminal-Icons
 
+# PSReadLine options
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineOption -BellStyle None
 #Set-PSReadLineOption -PredictionSource History
@@ -18,54 +18,57 @@ Set-PSReadLineOption -BellStyle None
 #Import-Module PSFzf
 #Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 
-Set-Alias vi nvim
-Set-Alias vim nvim
+# Set aliases
 Set-Alias grep findstr
 Set-Alias code code-insiders
-Set-Alias eth get-netadapter
+#Set-Alias eth get-netadapter
 
-function ll{
-	lsd -l
+# Define functions
+function ll {
+    lsd -l
 }
 
 function which ($arg) {
-  Get-Command -Name $arg -ErrorAction SilentlyContinue |
-     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
+    Get-Command -Name $arg -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
 
 function go {
-  start explorer .
+    Start-Process explorer .
+}
+
+function npp {
+    Start-Process "C:\Program Files\Notepad++\notepad++.exe" -ArgumentList $args
 }
 
 function lab {
-	cd $HOME/documents/github
+    Set-Location $HOME/documents/github
 }
 
 function serv {
-	cd $env:BIN && ./ngrok.exe http $args
+    Set-Location $env:BIN
+    ./ngrok.exe http $args
 }
+
 function note {
-	echo "date: $(date)" >> $HOME/notes.txt
-	echo "$args" >> $HOME/notes.txt
-	echo "" >> $HOME/notes.txt
+    $date = Get-Date
+    $content = "`ndate: $date`n$args`n"
+    $content | Out-File -Append -FilePath $HOME/notes.txt
 }
 
-function nvimdir {
-	cd $env:LOCALAPPDATA/nvim
-}
-
-function chrome {
- START "C:\Program Files\Google\Chrome Beta\Application\chrome.exe" --Incognito
-}
-
-function brave {
- START "C:\Program Files\BraveSoftware\Brave-Browser-Beta\Application\brave.exe" --incognito
+function govim {
+    Set-Location $env:LOCALAPPDATA/nvim
 }
 
 function hostedit {
-	sudo notepad c:\Windows\System32\Drivers\etc\hosts
+    Start-Process notepad "c:\Windows\System32\Drivers\etc\hosts" -Verb runAs
 }
 
 function histedit {
-	notepad C:\Users\$env:USERNAME\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
+    notepad "$HOME\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt"
 }
+
+# Import Chocolatey profile for tab completion
+#$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+#if (Test-Path $ChocolateyProfile) {
+#    Import-Module $ChocolateyProfile
+#}
