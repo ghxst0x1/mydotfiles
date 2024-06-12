@@ -45,8 +45,9 @@ function lab {
 }
 
 function serv {
-    Set-Location $env:BIN
-    ./ngrok.exe http $args
+    #Set-Location $env:BIN
+    #./ngrok.exe http $args
+	python -m http.server 80
 }
 
 function note {
